@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import imageEid from "../assets/eid.png";
 import imageEid2 from "../assets/eid (1).png";
 import imageEid3 from "../assets/eid (2).png";
@@ -115,6 +115,13 @@ function Home({ handlePartyModeClick }) {
 
     handlePartyModeClick();
   };
+
+  useEffect(() => {
+    // Reset the state when the component mounts
+    setName("Name");
+    setMessage("");
+    setBackground("bg-gradient-135");
+  }, []);
 
   return (
     <div className="flex justify-center items-center h-screen flex-wrap min-h-screen min-w-0 mx-10 px-10">
