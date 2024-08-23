@@ -35,19 +35,19 @@ const ImageContainer = ({ name, message, background, setBackground }) => {
           alt="eid"
           className="absolute top-20 left-10 rotate-[-15deg] sm:rotate-[-25deg]"
         />
-        
+
         {/* Text Container occupying 30% from the right */}
         <div className="flex justify-end items-center h-full w-full">
-          <div className="w-3/10 h-full p-4 flex flex-col justify-center text-right bg-opacity-50 z-[2]">
-            <h1 className="text-2xl font-bold sm:text-3xl text-primary">
+          <div className="w-[30%] h-full p-4 flex flex-col justify-center text-right bg-opacity-50 z-[2]">
+            <h1 className="text-2xl font-bold sm:text-3xl text-primary leading-tight">
               HAPPY TEACHER'S DAY
             </h1>
-            <p className="text-sm text-secondary mt-4">
+            <p className="text-sm text-secondary mt-4 leading-tight">
               I wish my dear teacher{" "}
               <span className="text-primary font-bold FONT-ARABIC">{name}</span>{" "}
               a wonderful Teachers' Day filled with joy and good health throughout the year
             </p>
-            <p className="text-sm text-secondary mt-4">{message}</p>
+            <p className="text-sm text-secondary mt-4 leading-tight">{message}</p>
           </div>
         </div>
       </div>
