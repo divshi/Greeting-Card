@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import imageEid from "../assets/eid.png";
 import imageEid2 from "../assets/eid (1).png";
 import imageEid3 from "../assets/eid (2).png";
@@ -10,10 +10,11 @@ const ImageContainer = ({ name, message, background, setBackground }) => {
   return (
     <div className="text-center flex-1">
       <div
-        className={`shadow-md rounded flex flex-col my-2 flex-1 px-8 py-6 text-center h-96 items-center justify-center relative ${background.includes('bg-gradient') ? background : ''}`}
+        className={`shadow-md rounded flex flex-col my-2 flex-1 h-96 relative ${background.includes('bg-gradient') ? background : ''}`}
         id="image-container"
         style={background.includes('url') ? { backgroundImage: background, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
       >
+        {/* Background Images */}
         <img
           src={imageEid}
           alt="eid"
@@ -34,15 +35,21 @@ const ImageContainer = ({ name, message, background, setBackground }) => {
           alt="eid"
           className="absolute top-20 left-10 rotate-[-15deg] sm:rotate-[-25deg]"
         />
-        <h1 className="text-2xl font-bold sm:text-3xl my-8 text-primary z-[2]">
-          Blessed Eid
-        </h1>
-        <p className="text-sm text-secondary text-right">
-          I wish my dear brother{" "}
-          <span className="text-primary font-bold FONT-ARABIC">{name}</span>{" "}
-          a blessed Eid and may you be in good health every year
-        </p>
-        <p className="text-sm text-secondary text-right mt-4">{message}</p>
+        
+        {/* Text Container occupying 30% from the right */}
+        <div className="flex justify-end items-center h-full w-full">
+          <div className="w-3/10 h-full p-4 flex flex-col justify-center text-right bg-opacity-50 z-[2]">
+            <h1 className="text-2xl font-bold sm:text-3xl text-primary">
+              HAPPY TEACHER'S DAY
+            </h1>
+            <p className="text-sm text-secondary mt-4">
+              I wish my dear teacher{" "}
+              <span className="text-primary font-bold FONT-ARABIC">{name}</span>{" "}
+              a wonderful Teachers' Day filled with joy and good health throughout the year
+            </p>
+            <p className="text-sm text-secondary mt-4">{message}</p>
+          </div>
+        </div>
       </div>
 
       <BackCountainer background={background} setBackground={setBackground} />
@@ -58,27 +65,27 @@ const FormContainer = ({
   handleGenerateImage,
 }) => {
   return (
-    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 flex-1 mx-4">
+    <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 flex-1 mx-4">
       <input
         type="text"
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-left placeholder-right mt-4 p-4"
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-left placeholder-right mt-4 p-4"
         placeholder="Enter your name"
         onChange={handleNameChange}
         value={name}
       />
       <textarea
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-left placeholder-right mt-4 h-40"
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-left placeholder-right mt-4 h-40"
         placeholder="Enter your message"
         onChange={handleMessageChange}
         value={message}
       ></textarea>
 
       <button
-        class="block rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring mt-4"
+        className="block rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring mt-4"
         type="button"
         onClick={handleGenerateImage}
       >
-        Download the image<i class="ml-2 text-sm fas fa-download"></i>
+        Download the image<i className="ml-2 text-sm fas fa-download"></i>
       </button>
     </div>
   );
@@ -110,7 +117,7 @@ function Home({ handlePartyModeClick }) {
   };
 
   return (
-    <div class="flex justify-center items-center h-screen flex-wrap  min-h-screen min-w-0 mx-10 px-10 ">
+    <div className="flex justify-center items-center h-screen flex-wrap min-h-screen min-w-0 mx-10 px-10">
       <ImageContainer
         background={background}
         name={name}

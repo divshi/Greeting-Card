@@ -8,15 +8,15 @@ function Header() {
           <div class="sm:flex sm:items-center sm:justify-between">
             <div class="text-center sm:text-left">
               <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl text-primary">
-              Create an Eid Mubarak card🎉
+              Create a Greeting card🎉
               </h1>
 
               <p class="mt-1.5 text-sm text-gray-500 sm:mt-2 text-center sm:text-left">
-              Blessed Eid to you, and may you be in good health every year
+              Wish your teacher a Happy Teachers' Day with this heartfelt card and best wishes for a year full of joy and good health.
               </p>
             </div>
 
-            <div class="mt-4 flex flex-col gap-4 sm:mt-0 justify-center sm:flex-row">
+            {/* <div class="mt-4 flex flex-col gap-4 sm:mt-0 justify-center sm:flex-row">
               <button
                 class=" rounded-lg border border-gray-200 px-5 py-3 text-gray-500 transition hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:ring sm:w-50"
                 type="button"
@@ -38,7 +38,7 @@ function Header() {
                   className="rounded-full w-full h-full object-cover"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </header>

@@ -1,8 +1,8 @@
 import React from "react";
 import test1 from "../assets/img1.png";
-import test2 from "../assets/img2.png";
-import test3 from "../assets/img3.png";
-import test4 from "../assets/img4.png";
+import test2 from "../assets/img1.png";
+import test3 from "../assets/img1.png";
+import test4 from "../assets/img1.png";
 
 const gradients = [
   "bg-gradient-135",
