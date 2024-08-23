@@ -7,6 +7,7 @@ function DetailsPage() {
   const [mobileNumber, setMobileNumber] = useState("");
   const [studentClass, setStudentClass] = useState("");
   const [address, setAddress] = useState("");
+  const [email, setEmail] = useState(""); // New state for email
   const [captcha, setCaptcha] = useState("");
   const [inputCaptcha, setInputCaptcha] = useState("");
   const navigate = useNavigate();
@@ -81,6 +82,16 @@ function DetailsPage() {
             onChange={(e) => setAddress(e.target.value)}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Enter Address"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Email</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter Email"
           />
         </div>
         <div className="mb-4">
