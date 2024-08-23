@@ -5,7 +5,6 @@ import test3 from "../assets/img3.png";
 import test4 from "../assets/img4.png";
 import test5 from "../assets/img5.png";
 
-
 const images = [
   `url(${test1})`,
   `url(${test2})`,
@@ -16,13 +15,13 @@ const images = [
 
 function BackCountainer({ setBackground }) {
   return (
-    <div className="w-3/4 mx-auto my-4">
-      {/* Render Images */}
-      <div className="flex flex-wrap justify-center items-center">
+    <div className="w-full flex justify-center py-4">
+      {/* Container to handle scrolling */}
+      <div className="flex space-x-4 overflow-x-auto">
         {images.map((item, index) => (
           <div
             key={index}
-            className="w-24 h-12 mx-2 border border-gray-300 rounded-full shadow-2xl flex justify-center items-center cursor-pointer"
+            className="w-24 h-12 border border-gray-300 rounded-full shadow-lg flex justify-center items-center cursor-pointer"
             style={{
               backgroundImage: item,
               backgroundSize: "cover",
