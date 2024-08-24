@@ -3,6 +3,7 @@ import imageEid from "../assets/eid.png";
 import imageEid2 from "../assets/eid (1).png";
 import imageEid3 from "../assets/eid (2).png";
 import imageEid4 from "../assets/eid (3).png";
+import img1 from "../assets/img1.png";  // Importing the default background image
 import html2canvas from "html2canvas";
 import BackCountainer from "./BackCountainer";
 
@@ -94,7 +95,7 @@ const FormContainer = ({
 function Home({ handlePartyModeClick }) {
   const [name, setName] = React.useState("Name");
   const [message, setMessage] = React.useState("");
-  const [background, setBackground] = React.useState("bg-gradient-135");
+  const [background, setBackground] = React.useState(`url(${img1})`); // Set the default background to img1.png
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -120,7 +121,7 @@ function Home({ handlePartyModeClick }) {
     // Reset the state when the component mounts
     setName("Name");
     setMessage("");
-    setBackground("bg-gradient-135");
+    setBackground(`url(${img1})`); // Reset to the default background image
   }, []);
 
   return (
