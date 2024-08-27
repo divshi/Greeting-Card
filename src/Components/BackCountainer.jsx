@@ -3,14 +3,13 @@ import test1 from "../assets/img1.png";
 import test2 from "../assets/img2.png";
 import test3 from "../assets/img3.png";
 import test4 from "../assets/img4.png";
-import test5 from "../assets/img5.png";
+
 
 const images = [
   `url(${test1})`,
   `url(${test2})`,
   `url(${test3})`,
-  `url(${test4})`,
-  `url(${test5})`,
+  `url(${test4})`
 ];
 
 function BackCountainer({ setBackground }) {
