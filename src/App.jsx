@@ -4,32 +4,25 @@ import "./App.css";
 // import Header from "./Components/Header";
 import Home from "./Components/Home";
 import DetailsPage from "./Components/DetailsPage";
-import ConfettiAnimation from "./Components/ConfettiAnimation";
+// import ConfettiAnimation from "./Components/ConfettiAnimation";
 
 function App() {
-  const [isPartyMode, setIsPartyMode] = useState(false);
+  // const [isPartyMode, setIsPartyMode] = useState(false);
 
-  const handlePartyModeClick = () => {
-    setIsPartyMode(!isPartyMode);
-    setTimeout(() => {
-      setIsPartyMode(false);
-    }, 5000);
-  };
+  // const handlePartyModeClick = () => {
+  //   setIsPartyMode(!isPartyMode);
+  //   setTimeout(() => {
+  //     setIsPartyMode(false);
+  //   }, 5000);
+  // };
 
   return (
     <Router>
       <div className="App">
-        {isPartyMode && <ConfettiAnimation isPartyMode={isPartyMode} />}
         <Routes>
           <Route path="/" element={<DetailsPage />} />
           <Route
-            path="/home"
-            element={
-              <>
-                
-                <Home handlePartyModeClick={handlePartyModeClick} />
-              </>
-            }
+            path="/home" element={<Home />}
           />
         </Routes>
       </div>
